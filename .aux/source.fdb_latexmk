@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1769977288.19751 "/home/jason/Documents/y3/ELEC3907/proposal/source.tex" "source.pdf" "source" 1769977288.79351 0
-  ".aux/source.aux" 1769977288.7535 2093 d71e72f95ddcacb654187a30e0a066b8 "pdflatex"
-  ".aux/source.out" 1769977288.7545 1593 391c4e839249110698cbe07740c4963e "pdflatex"
-  ".aux/source.toc" 1769977288.7545 805 f860202f2b46bbb6373c5b1c107ea3f4 "pdflatex"
-  "/home/jason/Documents/y3/ELEC3907/proposal/source.tex" 1769977287.5195 3189 2139a0663fe268122f5fdcef6c62c71f ""
+["pdflatex"] 1769977767.00406 "/home/jason/Documents/y3/ELEC3907/proposal/source.tex" "source.pdf" "source" 1769977767.50202 0
+  ".aux/source.aux" 1769977767.46416 1772 9ee6f3d2c2143b8455925a120261a88f "pdflatex"
+  ".aux/source.out" 1769977767.46416 1593 391c4e839249110698cbe07740c4963e "pdflatex"
+  ".aux/source.toc" 1769977767.46416 805 f860202f2b46bbb6373c5b1c107ea3f4 "pdflatex"
+  "/home/jason/Documents/y3/ELEC3907/proposal/source.tex" 1769977766.91317 2989 edeb38bb7068b9c9cb3eb2b27a1ba075 ""
   "/nix/store/5lkvak5xm36zmr5v781pwlpisz74izqw-texlive-combined-full-2025.20250703/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1 5523663 308b163833ea1e8c3bdd7f575aa370c5 ""
   "/nix/store/5lkvak5xm36zmr5v781pwlpisz74izqw-texlive-combined-full-2025.20250703/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1 3600487 3aaf53e4502ab7f3d8002f90e9f23fca ""
   "/nix/store/5lkvak5xm36zmr5v781pwlpisz74izqw-texlive-combined-full-2025.20250703/share/texmf-var/web2c/texmf.cnf" 1 44455 b4c8111756484fdacbfdb6f87f6a83b6 ""
@@ -58,10 +58,9 @@
   "/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250703-texmfdist/tex/latex/refcount/refcount.sty" 1 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250703-texmfdist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1 9684 a33a14b82ce60d6e77cb9be689d79ee6 ""
   "/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250703-texmfdist/tex/latex/url/url.sty" 1 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "img/block-diagram.png" 1769976896.52684 123129 49ddcf384762e44a8335a549a88837c2 ""
   "img/ortho-view.png" 1769977241.49953 303685 bb92f66a4d45ae4e67690c6e893a558b ""
   "sec/titlepage.tex" 1769975046.59635 579 8a364b0b113da7513515b911dfbe7815 ""
-  "source.tex" 1769977287.5195 3189 2139a0663fe268122f5fdcef6c62c71f ""
+  "source.tex" 1769977766.91317 2989 edeb38bb7068b9c9cb3eb2b27a1ba075 ""
   (generated)
   ".aux/source.aux"
   ".aux/source.log"

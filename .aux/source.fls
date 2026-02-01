@@ -123,11 +123,6 @@ OUTPUT .aux/source.toc
 INPUT /nix/store/5lkvak5xm36zmr5v781pwlpisz74izqw-texlive-combined-full-2025.20250703/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250703-texmfdist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250703-texmfdist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT ./img/block-diagram.png
-INPUT ./img/block-diagram.png
-INPUT ./img/block-diagram.png
-INPUT ./img/block-diagram.png
-INPUT ./img/block-diagram.png
 INPUT ./img/ortho-view.png
 INPUT ./img/ortho-view.png
 INPUT ./img/ortho-view.png

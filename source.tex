@@ -18,7 +18,7 @@
 
 	\section{Project Overview}
 
-		The goal of this project is to provide a compact arcade-style game console designed to restore hand-on interaction commonly found in traditional arcade systems.
+		The goal of this project is to provide a compact arcade-style game console designed to restore hands-on interaction commonly found in traditional arcade systems.
 		The console uses a 2D LED grid as the primary display as well as physical controls and audio.
 		It is designed to run multiple classic games such as Tron, Battleship, and Snake using a multi-purpose hardware layout and modular software design.
 
@@ -33,9 +33,9 @@
 
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=0.75\textwidth]{img/block-diagram.png}
-				\caption{Hardware system-level block diagram}
-				\label{fig:hardware-system}
+				\includegraphics[width=0.75\textwidth]{img/ortho-view.png}
+				\caption{Orthographic views of the hardware design}
+				\label{fig:hardware-ortho}
 			\end{figure}
 
 			The console itself (seen in \cref{fig:hardware-ortho}) consists of multiple subsystems, including a 16x16 LED display with a divider, where each of the 256 pixels of the display can be individually addressed to display an almost arbitrary number of colours.
@@ -46,13 +46,6 @@
 			There is also a freestanding divider that will be used during games that require the players to not see each others' boards during gameplay---which is the case in battleship, for example.
 			The microcontroller is programmed with the games, interfacing with the other components to provide a seamless experience while using the console.
 			Finally, the power supply, powering the display and the microcontroller, which subsequently powers the other components.
-
-			\begin{figure}[H]
-				\centering
-				\includegraphics[width=0.75\textwidth]{img/ortho-view.png}
-				\caption{Orthographic views of the hardware design}
-				\label{fig:hardware-ortho}
-			\end{figure}
 
 		\subsection{Preliminary Specifications and Requirements}
 
