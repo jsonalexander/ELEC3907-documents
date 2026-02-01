@@ -12,6 +12,6 @@
 \contentsline {subsection}{\numberline {3.2}Heat}{3}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Sustainability and Lifecycle}{3}{section.4}%
 \contentsline {section}{\numberline {5}Team Roles and Responsibilities}{3}{section.5}%
-\contentsline {section}{\numberline {6}Project Timing}{3}{section.6}%
-\contentsline {section}{\numberline {7}Conclusion}{3}{section.7}%
-\contentsline {section}{\numberline {A}Supplemental materials}{4}{appendix.A}%
+\contentsline {section}{\numberline {6}Project Timing}{4}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{4}{section.7}%
+\contentsline {section}{\numberline {A}Supplemental materials}{5}{appendix.A}%

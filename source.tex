@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\usepackage[margin=2in]{geometry}
+\usepackage[margin=1.5in]{geometry}
 
 \setlength{\parindent}{0.5in}
 
@@ -67,10 +67,12 @@
 				To overcome scheduling issues, especially with continuous-delivery applications like audio playback, the second microcontroller is dedicated to receiving playback signals from the first microcontroller and controlling the speaker continuously.
 				This second microcontroller can be much less powerful than the main one, essentially serving as an additional thread for the console, allowing it to avoid audio cut-outs and maintain responsiveness of the console proper.
 
+\newpage
+
 				Additionally, since the hardware system is designed to be general-purpose, we have decided to leverage object-oriented programming techniques in C++ to model the hardware system and allow for composability.
 				The hardware-software interface is designed in such a way that basic operations like controlling the LED matrix can be inherited and extended to implement game-specific behaviours, reducing unnecessary boilerplate code and further memory usage.
 				\cref{fig:system-diagram} provides a block diagram outlining the general control flow of the system.
-				Most elements included in this figure will have some representation in software, allowing for simple control of components through class methods.
+				Most elements included in this figure will have some class representation in software, allowing for simple control of components through their corresponding class methods.
 
 				\begin{figure}[H]
 					\centering
@@ -138,22 +140,66 @@
 
 	\section{Team Roles and Responsibilities}
 
+\newpage
+
 	\section{Project Timing}
 
+		The project design cycle will be a standard engineering one.
+		The following work breakdown structure lists all foreseen tasks with major development phases in chronological order.
+		A more in-depth Gantt chart with task designation and progress is listed in \cref{appendix:supplemental}.
+
+		\begin{itemize}
+			\item Initiation
+				\begin{itemize}
+					\item Define goals
+					\item Project outline
+					\item Project overview presentation
+					\item Project proposal
+					\item Project design review presentation
+				\end{itemize}
+			\item Planning and design
+				\begin{itemize}
+					\item Define scope
+					\item Identify parts
+					\item Tabulate cost
+					\item Acquire parts
+				\end{itemize}
+			\item Execution
+				\begin{itemize}
+					\item Part testing
+					\item Software-hardware interface
+					\item Board development
+					\item Game development
+					\item LED screen
+					\item Housing and divider
+					\item Game controllers
+					\item Implementation and testing
+				\end{itemize}
+			\item Evaluation
+				\begin{itemize}
+					\item Monitor progress
+					\item Evaluate progress
+					\item Consider problems
+					\item Address problems
+					\item Gather feedback
+				\end{itemize}
+		\end{itemize}
 
 	\section{Conclusion}
 
-		By combining modular hardware and composable software designs, the system is able to support multiple classic games whilst remaining flexible for possible expansion in the future.
+		By combining modular hardware and composable software designs, the proposed game console system is able to support multiple classic games whilst remaining flexible with further expansion possible in the future.
 		The proposed approaches balance performance, cost, and safety within the constraints of the microcontrollers.
 		Identified risks, particularly power and thermal control, are mitigated through ventilation, insulation, and protective circuitry.
 		Overall, the design demonstrates a sustainable and scalable system meeting project goals and encouraging creativity and longevity.
 
-\appendix
-	\section{Supplemental materials}
+\newpage
 
+\appendix
+	\section{Supplemental materials}\label{appendix:supplemental}
+	\vspace*{-2em}
 	\begin{center}
 		\begin{tikzpicture}[overlay]
-			\node[anchor=north] {\includegraphics[angle=-90,width=1\textwidth]{fig/gantt.pdf}};
+			\node[anchor=north] {\includegraphics[angle=-90,width=1.1\textwidth]{fig/gantt.pdf}};
 		\end{tikzpicture}
 	\end{center}
 
