@@ -4,9 +4,14 @@
 \contentsline {subsubsection}{\numberline {2.1.1}The Hardware}{1}{subsubsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.2}The Software}{1}{subsubsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.2}Preliminary Specifications and Requirements}{2}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Design Approaches}{2}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Risk and Safety Assessment}{2}{section.3}%
-\contentsline {section}{\numberline {4}Sustainability and Lifecycle}{2}{section.4}%
-\contentsline {section}{\numberline {5}Team Roles and Responsibilities}{2}{section.5}%
-\contentsline {section}{\numberline {6}Project Timing}{2}{section.6}%
-\contentsline {section}{\numberline {7}Conclusion}{2}{section.7}%
+\contentsline {subsection}{\numberline {2.3}The display}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}The removable controllers}{2}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Design Approaches}{3}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Risk and Safety Assessment}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Power delivery}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Heat}{3}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Sustainability and Lifecycle}{3}{section.4}%
+\contentsline {section}{\numberline {5}Team Roles and Responsibilities}{3}{section.5}%
+\contentsline {section}{\numberline {6}Project Timing}{3}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{3}{section.7}%
+\contentsline {section}{\numberline {A}Supplemental materials}{4}{appendix.A}%

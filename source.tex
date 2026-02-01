@@ -2,6 +2,8 @@
 
 \usepackage[margin=2in]{geometry}
 
+\setlength{\parindent}{0.5in}
+
 \usepackage{float}
 \usepackage{caption}
 \usepackage{wrapfig}
@@ -10,6 +12,11 @@
 \usepackage{cleveref}
 
 \usepackage{graphicx}
+\usepackage{pdfpages}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
 
 \begin{document}
 	
@@ -20,24 +27,24 @@
 	\section{Project Overview}
 
 		The goal of this project is to provide a compact arcade-style game console designed to restore hands-on interaction commonly found in traditional arcade systems.
-		The console uses a 2D LED grid as the primary display as well as physical controls and audio.
-		It is designed to run multiple classic games such as Tron, Battleship, and Snake using a multi-purpose hardware layout and modular software design.
+		The console would use a two-dimensional LED grid as the primary display as well as physical input devices and near-field audio output.
+		It is designed to run multiple classic games such as Tron, Battleship, and Snake, all using a multipurpose hardware layout and modular software design.
 
 	\section{Design}
 
 		\subsection{System-Level Description}
 
-			The console is a game system where three different games can be played using a physical display and tactile controls.
-			The console does not require an internet connection and can be played anywhere there is a source of power.
-			It provides a compact, physical, and portable version of several arcade games such that people of all ages can enjoy using the simplistic controls and peripherals.
-			Additionally, more games may be uploaded and included, allowing for different people with different preferences to enjoy the console.
+			The proposed console would be a game system where three different games can be played using a simple display and physical controls.
+			It does not require an internet connection and can be played anywhere there is a source of power.
+			It provides a compact, physical, and portable version of several arcade games such that people of all ages can enjoy using its simplistic controls and peripherals.
+			Additionally, more games can be implemented and included on-board, allowing for different people with diverse preferences to enjoy the console.
 
 			\subsubsection{The Hardware}
 
 				\begin{wrapfigure}{r}{0.5\textwidth}
 					\centering
 					\includegraphics[width=0.48\textwidth]{img/ortho-view.png}
-					\caption{Orthographic views of the hardware design}
+					\caption{Orthographic views of the physical design}
 					\label{fig:hardware-ortho}
 				\end{wrapfigure}
 
@@ -46,20 +53,22 @@
 				These LCD screens will also act as instructional screens to guide players through the games.
 				There are two removable and adjustable controllers, where the controller can be plugged into either side of the console to accommodate right- or left-handedness or for single and multiplayer options.
 				The speaker provides sound effects for audio feedback and soundscapes during gameplay.
-				There is also a freestanding divider that will be used during games that require the players to not see each others' boards during gameplay---which is the case in battleship, for example.
-				The microcontroller is programmed with the game logic, interfacing with the other components to provide a seamless experience while using the console.
-				Finally, the power supply powers the display and the microcontroller, the latter of which subsequently powers the other components.
+				There is also a freestanding divider that will be used during games that require the players' boards to be hidden from each other during gameplay---as in the case in battleship, for example.
+				A microcontroller is programmed with the game logic, interfacing with the other components to provide a seamless experience while using the console.
+				An additional microcontroller listens for audio playback cues, and drives a speaker accordingly, allowing for ansynchronous audio output.
+				Finally, the power supply powers the display and the microcontrollers, the first of the latter of which subsequently powers the other components.
 
 			\subsubsection{The Software}
 
-				The software system must be able to interface with all the components outlined, taking input from the controllers, controlling the LED matrix, using the LCD displays to relay information to each player, and playing audio.
-				The system is constrained by the memory limitations of each microcontroller, as well as their single-threadedness.
-				To overcome scheduling issues, especially with continuous-delivery applications like audio playback, a second microcontroller will be dedicated to receiving playback signals from the main microcontroller and controlling the speaker continuously.
-				This second microcontroller can be much less powerful than the main one, essentially serving as an asynchronous processing thread to avoid audio cut-outs and maintain responsiveness of the console proper.
+				The software system must be able to interface with all the components outlined, taking input from the game controllers, controlling the LED matrix, using the LCD displays to relay information to each player, and playing audio.
+				The system is constrained by the memory limitations of both microcontrollers, and the fact they are both single-threaded.
+				To overcome scheduling issues, especially with continuous-delivery applications like audio playback, the second microcontroller is dedicated to receiving playback signals from the first microcontroller and controlling the speaker continuously.
+				This second microcontroller can be much less powerful than the main one, essentially serving as an additional thread for the console, allowing it to avoid audio cut-outs and maintain responsiveness of the console proper.
 
 				Additionally, since the hardware system is designed to be general-purpose, we have decided to leverage object-oriented programming techniques in C++ to model the hardware system and allow for composability.
 				The hardware-software interface is designed in such a way that basic operations like controlling the LED matrix can be inherited and extended to implement game-specific behaviours, reducing unnecessary boilerplate code and further memory usage.
 				\cref{fig:system-diagram} provides a block diagram outlining the general control flow of the system.
+				Most elements included in this figure will have some representation in software, allowing for simple control of components through class methods.
 
 				\begin{figure}[H]
 					\centering
@@ -70,16 +79,76 @@
 
 		\subsection{Preliminary Specifications and Requirements}
 
+			\subsection{The display}
+
+				The display will be a 16x16 grid of LEDs which will server as the main display for the game console.
+				An addressable GRB LED strip will be cut into 16 lines of 16 LEDs, the lines being wired together neatly on a piece of plywood.
+				The LEDs will be controlled by an Arduino Mega and will require a power supply.
+				In total, this component will require 256 addressable LEDs from a WS2812B LED strip, an Arduino Mega, a power supply, and physical interconnections---presumably wires, solder, etc.
+				The enclosure will also need a 1x1 foot piece of thin plywood to serve as a backboard, a styrofoam sheet to make a grid separating the LEDs, and frosted acrylic glass to diffuse light.
+				Most of these items can be found in the lab, with others being provided by group members.
+				The only items to be purchased and included in our costs will be the LED strip at around \$25, the plywood between \$15 and \$30, the styrofoam sheet around \$2, and the acrylic glass around \$5.
+
+
+			\subsection{The removable controllers}
+
+				The removable controllers will each consist of a joystick fitted into a block that can be attached to the console via interlocking rails.
+				The controller would have metal contacts that, when slid into corresponding rails on the console, would establish a connection with the Arduino Mega.
+				The rail would likely consist of guides that slide together to hold the controller firmly in place without too much stress on the contacts, but enough pressure to ensure a reliable connection.
+				The materials required have been provided by group members or will be acquired when gathering the materials for housing the LED display.
+
 		\subsection{Design Approaches}
 
 	\section{Risk and Safety Assessment}
 
+		\subsection{Power delivery}
+
+			Supplying power to the microcontrollers and LED matrix poses inherent risks.
+			The LED strip selected to build the display from has a considerable maximum power draw due to its individually addressable LEDs and the ability to control the colour of each LED.
+			The recommended power supply from the vendor is 60 Watts (5 Volts at 12 Amps), however initial testing has shown that the actual power draw needed for this project is likely to be much less than that since all the LEDs in the matrix will not be at full load when portions of the display are off and only individual colours (i.e. red, blue, green) are used instead of combinations thereof.
+			Still, supplying the required power to all 256 LEDs in the display will take a considerable amount of power.
+			Risks associated with power delivery can be mitigated by ensuring there is no exposed wiring and implementing additional safety components like fuses to ensure fail-safety.
+
+		\subsection{Heat}
+	
+			While power delivery has its own risks, power draw also poses its own.
+			Given that the LEDs and other components will be enclosed in a grid surrounded by foam and wood, the console may begin to heat up over time.
+			If too much heat accumulates, the console may experience performance issue, fail, or even catch fire.
+			If left unattended, the console could become a risk to its surroundings.
+			To avoid these issues, action must be taken to dissipate heat and prevent heat from affecting other components of the game console.
+			If heat becomes an issue, there are several options to manage it such as:
+			\begin{itemize}
+				\item Ventilation ports in the enclosure to allow for heat to escape
+				\item Fans in the enclosure to allow for air to circulate
+				\item Insulation like heat shrink, electrical tape, etc. to isolate components and prevent shorted connections
+			\end{itemize}
+
 	\section{Sustainability and Lifecycle}
+
+		Modular components such as the connectable controllers can be swapped out for new controllers if the existing controllers become damaged or begin to not work.
+		Additionally, the divider can be replaced.
+
+		Individual LEDs used in the display can be swapped out in the case that they begin to malfunction (each pixel of the display can be independently replaced, ensuring that the entire display does not need to be discarded when only a part of it begins to malfunction).
+
+		Additional games can be added further down the line to improve replayability by the ability to upload games to the arduino/microcontroller in the console.
+		
+		Possible scalability if this were to be a product mass-produced, as older kids with some coding experience can learn to code their own games onto it to allow the product to grow with the child. The code can be modular as well so that vital code is protected from accidental changes during experimentation. 
 
 	\section{Team Roles and Responsibilities}
 
 	\section{Project Timing}
 
+
 	\section{Conclusion}
+
+		By combining modular hardware and composable software designs, the system is able to support multiple classic games whilst remaining flexible for possible expansion in the future.
+		The proposed approaches balance performance, cost, and safety within the constraints of the microcontrollers.
+		Identified risks, particularly power and thermal control, are mitigated through ventilation, insulation, and protective circuitry.
+		Overall, the design demonstrates a sustainable and scalable system meeting project goals and encouraging creativity and longevity.
+
+\appendix
+	\section{Supplemental materials}
+
+		\includepdf{fig/gantt.pdf}
 
 \end{document}
