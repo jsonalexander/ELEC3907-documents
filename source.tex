@@ -1,16 +1,58 @@
 \documentclass{article}
 
+\usepackage[margin=2in]{geometry}
+
+\usepackage{float}
+\usepackage{caption}
+
+\usepackage{hyperref}
+\usepackage{cleveref}
+
 \usepackage{graphicx}
 
 \begin{document}
 	
-	\input{sections/titlepage.tex}
+	\input{sec/titlepage.tex}
+
+	\newgeometry{margin=1in}
 
 	\section{Project Overview}
+
+		The goal of this project is to provide a compact arcade-style game console designed to restore hand-on interaction commonly found in traditional arcade systems.
+		The console uses a 2D LED grid as the primary display as well as physical controls and audio.
+		It is designed to run multiple classic games such as Tron, Battleship, and Snake using a multi-purpose hardware layout and modular software design.
 
 	\section{Design}
 
 		\subsection{System-Level Description}
+
+			The console is a game system where three different games can be played using a physical display and tactile controls.
+			The console does not require an internet connection and can be played anywhere there is a source of power.
+			It provides a compact, physical, and portable version of several arcade games such that people of all ages can enjoy using the simplistic controls and peripherals.
+			Additionally, more games may be uploaded and included, allowing for different people with different preferences to enjoy the console.
+
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.75\textwidth]{img/block-diagram.png}
+				\caption{Hardware system-level block diagram}
+				\label{fig:hardware-system}
+			\end{figure}
+
+			The console itself (seen in \cref{fig:hardware-ortho}) consists of multiple subsystems, including a 16x16 LED display with a divider, where each of the 256 pixels of the display can be individually addressed to display an almost arbitrary number of colours.
+			There are two LCD screens for game selection, acting as a menu for players to interface with the console.
+			These LCD screens will also act as instructional screens to guide players through the games.
+			There are two removable and adjustable controllers, where the controller can be plugged into either side of the console to accommodate right- or left-handedness or for single and multiplayer options.
+			The speaker provides sound effects for audio feedback and soundscapes during gameplay.
+			There is also a freestanding divider that will be used during games that require the players to not see each others' boards during gameplay---which is the case in battleship, for example.
+			The microcontroller is programmed with the games, interfacing with the other components to provide a seamless experience while using the console.
+			Finally, the power supply, powering the display and the microcontroller, which subsequently powers the other components.
+
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.75\textwidth]{img/ortho-view.png}
+				\caption{Orthographic views of the hardware design}
+				\label{fig:hardware-ortho}
+			\end{figure}
 
 		\subsection{Preliminary Specifications and Requirements}
 
