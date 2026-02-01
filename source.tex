@@ -18,6 +18,8 @@
 \pagestyle{fancy}
 \fancyhf{}
 
+\usepackage{tikz}
+
 \begin{document}
 	
 	\input{sec/titlepage.tex}
@@ -149,6 +151,10 @@
 \appendix
 	\section{Supplemental materials}
 
-		\includepdf{fig/gantt.pdf}
+	\begin{center}
+		\begin{tikzpicture}[overlay]
+			\node[anchor=north] {\includegraphics[angle=-90,width=1\textwidth]{fig/gantt.pdf}};
+		\end{tikzpicture}
+	\end{center}
 
 \end{document}
