@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/nixos.org) (preloaded format=pdflatex 1980.1.1)  1 FEB 2026 18:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/nixos.org) (preloaded format=pdflatex 1980.1.1)  1 FEB 2026 18:45
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -258,9 +258,20 @@ LaTeX Info: Redefining \cpagerefrange on input line 2370.
 LaTeX Info: Redefining \Cpagerefrange on input line 2370.
 LaTeX Info: Redefining \labelcref on input line 2370.
 LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: always capitalise cross-reference names on input line 78
+25.
+Package cleveref Info: always capitalise cross-reference names on input line 78
+52.
 )
 ==> First Aid for cleveref.sty applied!
 
+(/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
+3-texmfdist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count302
+\c@@ppsavesec=\count303
+\c@@ppsaveapp=\count304
+)
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
 3-texmfdist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
@@ -297,15 +308,15 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
 3-texmfdist/tex/latex/tools/calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count302
-\calc@Bcount=\count303
+\calc@Acount=\count305
+\calc@Bcount=\count306
 \calc@Adimen=\dimen173
 \calc@Bdimen=\dimen174
 \calc@Askip=\skip52
 \calc@Bskip=\skip53
 LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count304
+\calc@Ccount=\count307
 \calc@Cskip=\skip54
 )
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
@@ -344,13 +355,13 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 3-texmfdist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2025/03/12 v0.6f Pdfpages driver for pdfTeX (AM)
 )
-\pdfpages@includegraphics@status=\count305
+\pdfpages@includegraphics@status=\count308
 \AM@pagebox=\box56
 \AM@global@opts=\toks22
-\AM@pagecnt=\count306
+\AM@pagecnt=\count309
 \AM@toc@title=\toks23
 \AM@lof@heading=\toks24
-\c@AM@survey=\count307
+\c@AM@survey=\count310
 \AM@templatesizebox=\box57
 )
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
@@ -426,14 +437,14 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \pgf@yd=\dimen191
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count308
-\c@pgf@countb=\count309
-\c@pgf@countc=\count310
-\c@pgf@countd=\count311
+\c@pgf@counta=\count311
+\c@pgf@countb=\count312
+\c@pgf@countc=\count313
+\c@pgf@countd=\count314
 \t@pgf@toka=\toks30
 \t@pgf@tokb=\toks31
 \t@pgf@tokc=\toks32
-\pgf@sys@id@count=\count312
+\pgf@sys@id@count=\count315
 
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
 3-texmfdist/tex/generic/pgf/systemlayer/pgf.cfg
@@ -452,8 +463,8 @@ File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
 3-texmfdist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count313
-\pgfsyssoftpath@bigbuffer@items=\count314
+\pgfsyssoftpath@smallbuffer@items=\count316
+\pgfsyssoftpath@bigbuffer@items=\count317
 )
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
 3-texmfdist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
@@ -470,7 +481,7 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
 3-texmfdist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen192
-\pgfmath@count=\count315
+\pgfmath@count=\count318
 \pgfmath@box=\box59
 \pgfmath@toks=\toks33
 \pgfmath@stack@operand=\toks34
@@ -498,7 +509,7 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 3-texmfdist/tex/generic/pgf/math/pgfmathcalc.code.tex)
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
 3-texmfdist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count316
+\c@pgfmathroundto@lastzeros=\count319
 ))
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
 3-texmfdist/tex/generic/pgf/math/pgfint.code.tex)
@@ -538,7 +549,7 @@ File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box60
 \pgf@hbox=\box61
 \pgf@layerbox@main=\box62
-\pgf@picture@serial@count=\count317
+\pgf@picture@serial@count=\count320
 )
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
 3-texmfdist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
@@ -573,8 +584,8 @@ File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 3-texmfdist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen272
-\pgf@sys@shading@range@num=\count318
-\pgf@shadingcount=\count319
+\pgf@sys@shading@range@num=\count321
+\pgf@shadingcount=\count322
 )
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
 3-texmfdist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
@@ -645,7 +656,7 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
 3-texmfdist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count320
+\pgf@plot@mark@count=\count323
 \pgfplotmarksize=\dimen277
 )
 \tikz@lastx=\dimen278
@@ -660,19 +671,19 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@figbox@bg=\box66
 \tikz@tempbox=\box67
 \tikz@tempbox@bg=\box68
-\tikztreelevel=\count321
-\tikznumberofchildren=\count322
-\tikznumberofcurrentchild=\count323
-\tikz@fig@count=\count324
+\tikztreelevel=\count324
+\tikznumberofchildren=\count325
+\tikznumberofcurrentchild=\count326
+\tikz@fig@count=\count327
 
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
 3-texmfdist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count325
-\pgfmatrixcurrentcolumn=\count326
-\pgf@matrix@numberofcolumns=\count327
+\pgfmatrixcurrentrow=\count328
+\pgfmatrixcurrentcolumn=\count329
+\pgf@matrix@numberofcolumns=\count330
 )
-\tikz@expandcount=\count328
+\tikz@expandcount=\count331
 
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
 3-texmfdist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.cod
@@ -682,28 +693,28 @@ File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
 3-texmfdist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count329
+\l__color_backend_stack_int=\count332
 ) (.aux/source.aux)
 \openout1 = `source.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -743,7 +754,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 23.
+Package hyperref Info: Link coloring OFF on input line 25.
 (.aux/source.out) (.aux/source.out)
 \@outlinefile=\write4
 \openout4 = `source.out'.
@@ -752,16 +763,16 @@ Package hyperref Info: Link coloring OFF on input line 23.
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
 3-texmfdist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count330
+\scratchcounter=\count333
 \scratchdimen=\dimen286
 \scratchbox=\box69
-\nofMPsegments=\count331
-\nofMParguments=\count332
+\nofMPsegments=\count334
+\nofMParguments=\count335
 \everyMPshowfont=\toks38
-\MPscratchCnt=\count333
+\MPscratchCnt=\count336
 \MPscratchDim=\dimen287
-\MPnumerator=\count334
-\makeMPintoPDFobject=\count335
+\MPnumerator=\count337
+\makeMPintoPDFobject=\count338
 \everyMPtoPDFconversion=\toks39
 )
 (/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.2025070
@@ -804,7 +815,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 {/nix/store/5lkvak5xm36zmr5v781pwlpisz74izqw-texlive-combined-full-2025.2025070
-3/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+3/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+[2])
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -837,10 +850,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<img/ortho-view.png, id=102, 1131.22626pt x 568.1225pt>
+<img/ortho-view.png, id=131, 1131.22626pt x 568.1225pt>
 File: img/ortho-view.png Graphic file (type png)
 <use img/ortho-view.png>
-Package pdftex.def Info: img/ortho-view.png  used on input line 48.
+Package pdftex.def Info: img/ortho-view.png  used on input line 50.
 (pdftex.def)             Requested size: 225.4804pt x 113.23238pt.
 
 
@@ -849,17 +862,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.70 \newpage
+l.72 \newpage
               [1
 
  <./img/ortho-view.png>]
-<img/block-diagram.png, id=111, 1296.845pt x 698.61pt>
+<img/block-diagram.png, id=140, 1296.845pt x 698.61pt>
 File: img/block-diagram.png Graphic file (type png)
 <use img/block-diagram.png>
-Package pdftex.def Info: img/block-diagram.png  used on input line 79.
+Package pdftex.def Info: img/block-diagram.png  used on input line 81.
 (pdftex.def)             Requested size: 352.31625pt x 189.78915pt.
 
 
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.114 					\item M
+                  easure the distance between LEDs to create a foam lattice ...
 [2{/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250
 703-texmfdist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./img/block-diagram.p
 ng>]
@@ -867,29 +887,33 @@ ng>]
 [3]
 
 [4]
-<fig/gantt.pdf, id=128, 794.97pt x 614.295pt>
+
+[5]
+
+[6]
+<fig/gantt.pdf, id=182, 794.97pt x 614.295pt>
 File: fig/gantt.pdf Graphic file (type pdf)
 <use fig/gantt.pdf>
-Package pdftex.def Info: fig/gantt.pdf  used on input line 202.
+Package pdftex.def Info: fig/gantt.pdf  used on input line 268.
 (pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 
 
-[5 <./fig/gantt.pdf>] (.aux/source.aux)
+[7 <./fig/gantt.pdf>] (.aux/source.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-09>
  ***********
 Package rerunfilecheck Info: File `source.out' has not changed.
-(rerunfilecheck)             Checksum: 259BC64E922C4ED685B166B2B48C3FE5;2527.
+(rerunfilecheck)             Checksum: B6DADF308F9A15556D83045C0BFDA6F4;3154.
  ) 
 Here is how much of TeX's memory you used:
- 23760 strings out of 467888
- 469023 string characters out of 5405403
- 835734 words of memory out of 5000000
- 51956 multiletter control sequences out of 15000+600000
+ 23902 strings out of 467888
+ 471429 string characters out of 5405403
+ 839356 words of memory out of 5000000
+ 52072 multiletter control sequences out of 15000+600000
  629284 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,87p,447b,626s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,87p,447b,697s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250
 703-texmfdist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></nix/store/h03408lmim0
 far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250703-texmfdist/fonts/type1
@@ -899,10 +923,10 @@ live-combined-full-2025.20250703-texmfdist/fonts/type1/public/amsfonts/cm/cmr10
 250703-texmfdist/fonts/type1/public/amsfonts/cm/cmr17.pfb></nix/store/h03408lmi
 m0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250703-texmfdist/fonts/typ
 e1/public/cm-super/sfrm1000.pfb>
-Output written on .aux/source.pdf (6 pages, 624227 bytes).
+Output written on .aux/source.pdf (9 pages, 631042 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
- 156 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 164 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 246 PDF objects out of 1000 (max. 8388607)
+ 213 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 204 words of extra memory for PDF output out of 10000 (max. 10000000)
 

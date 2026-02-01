@@ -9,7 +9,9 @@
 \usepackage{wrapfig}
 
 \usepackage{hyperref}
-\usepackage{cleveref}
+\usepackage[capitalise]{cleveref}
+
+\usepackage{appendix}
 
 \usepackage{graphicx}
 \usepackage{pdfpages}
@@ -83,7 +85,7 @@
 
 		\subsection{Preliminary Specifications and Requirements}
 
-			\subsection{The display}
+			\subsubsection{The outputs}
 
 				The display will be a 16x16 grid of LEDs which will server as the main display for the game console.
 				An addressable GRB LED strip will be cut into 16 lines of 16 LEDs, the lines being wired together neatly on a piece of plywood.
@@ -93,15 +95,77 @@
 				Most of these items can be found in the lab, with others being provided by group members.
 				The only items to be purchased and included in our costs will be the LED strip at around \$25, the plywood between \$15 and \$30, the styrofoam sheet around \$2, and the acrylic glass around \$5.
 
+				The audio output will consist of two small speakers.
+				These speakers were available in the lab, so they resulted in no additional cost.
 
-			\subsection{The removable controllers}
+			\subsubsection{The user inputs}
 
-				The removable controllers will each consist of a joystick fitted into a block that can be attached to the console via interlocking rails.
+				The user inputs---removable controllers---will each consist of a joystick fitted into a block that can be attached to the console via interlocking rails.
 				The controller would have metal contacts that, when slid into corresponding rails on the console, would establish a connection with the Arduino Mega.
 				The rail would likely consist of guides that slide together to hold the controller firmly in place without too much stress on the contacts, but enough pressure to ensure a reliable connection.
 				The materials required have been provided by group members or will be acquired when gathering the materials for housing the LED display.
 
 		\subsection{Design Approaches}
+
+			\subsubsection{The LED matrix}
+
+				\begin{enumerate}
+					\item Test the LED strip to ensure the individual LEDs work and are addresable with the Arduino Mega
+					\item Measure the distance between LEDs to create a foam lattice reducing interference between pixels
+					\item Wire the 16 LED strip segments to form a uniformly-spaced pixel matrix on the plywood base
+					\item Test that the LEDs are still working and addressable with the Arduino
+					\item Construct the enclosure (styrofoam grid and acrylic glass)
+					\item Add ports for connection and ventilation
+					\item Install fans if needed
+				\end{enumerate}
+
+				\noindent If, for instance, we are unable to control the LED matrix, an alternative last-minute solution would be to buy a premade LED matrix to server as the display.
+
+			\subsubsection{Game controllers}
+
+				\begin{enumerate}
+					\item Test the joysticks, ensuring they communicate appropriately with the Arduino Mega
+					\item Determine dimensions for the controller based on the LED matrix's size
+					\item Contruct the controller housing that that will hold the joystick and connection terminals
+					\item Outfit the LED enclosure with contacts for controller interfacing
+					\item Install guide rails to slot the controller onto the display encloser
+					\item Test the controller maintains consistent connection with the Arduino
+				\end{enumerate}
+
+				\noindent If there are technical or logistical difficulties with this approach, the controllers could be hard-wired to the LED display and affixed using other methods (screws, adhesive, etc.) to ensure working inputs for the system.
+
+			\subsubsection{The divider}
+
+				\begin{enumerate}
+					\item Testing variously sized dividers made of a temporary material like cardboard to determine the ideal dimensions.
+						No player should have visibility of the other player's screen with the divider in place, but it should also be lightweight and relatively small.
+					\item Constructing the divider with plywood
+					\item Adding freestanding supports that hold the divider upright
+				\end{enumerate}
+
+				\noindent If it is a challenge to make the divider stand upright, a slot can be made in the display housing to help hold the divider in place.
+
+			\subsection{The software}
+				
+				\begin{itemize}
+					\item Work together to create a generic and composable game board setup, including a virtual pixel matrix, inputs, menus, and audio cues that work for any game.
+					\item Create a virtual representation of the game board for testing purposes when it is not realistic to flash code to the microcontrollers
+					\item Implement the games based on the generic classes written for the game board
+					\item Design music and sound effects for the Arduino Nano to play during games
+					\item Ensure that the microcontroller handling audio correctly interprets audio playback cues from the main microcontroller
+				\end{itemize}
+
+				\noindent The software team will be working mostly independently on separate games, with input and help from each other as is necessary.
+				\medskip
+
+				\noindent If there are problems with our working software implementation, it will likely be due to how memory is allocated.
+				Given that there is a very limited amount of memory on the microcontrollers, alternate methods of allocating resources for each game may need to be considered (static allocation, predictable allocation and de-allocation per-game, etc).
+
+			\subsection{Integration}
+	
+				One of the last steps in the first iteration of the design process will be to ensure that the microcontrollers control the physical hardware as intended.
+				If encountering problems at this stage, previous design steps will need to be revisited.
+				Any problems at this point will be interfacing issues or limitations imposed by our hardware.
 
 	\section{Risk and Safety Assessment}
 
@@ -146,7 +210,7 @@
 
 		The project design cycle will be a standard engineering one.
 		The following work breakdown structure lists all foreseen tasks with major development phases in chronological order.
-		A more in-depth Gantt chart with task designation and progress is listed in \cref{appendix:supplemental}.
+		A more in-depth Gantt chart with task designations and progress is listed in \cref{appendix:supplemental}.
 
 		\begin{itemize}
 			\item Initiation
@@ -194,13 +258,17 @@
 
 \newpage
 
-\appendix
+\begin{appendices}\crefalias{section}{appendix}
+
 	\section{Supplemental materials}\label{appendix:supplemental}
-	\vspace*{-2em}
-	\begin{center}
-		\begin{tikzpicture}[overlay]
-			\node[anchor=north] {\includegraphics[angle=-90,width=1.1\textwidth]{fig/gantt.pdf}};
-		\end{tikzpicture}
-	\end{center}
+
+		\vspace*{-2em}
+		\begin{center}
+			\begin{tikzpicture}[overlay]
+				\node[anchor=north] {\includegraphics[angle=-90,width=1.1\textwidth]{fig/gantt.pdf}};
+			\end{tikzpicture}
+		\end{center}
+
+\end{appendices}
 
 \end{document}
