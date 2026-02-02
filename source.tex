@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\usepackage[margin=1.5in]{geometry}
+\usepackage{geometry}
 
 \setlength{\parindent}{0.5in}
 
@@ -10,6 +10,8 @@
 
 \usepackage{hyperref}
 \usepackage[capitalise]{cleveref}
+
+\usepackage{enumitem}
 
 \usepackage{appendix}
 
@@ -85,7 +87,7 @@
 
 		\subsection{Preliminary Specifications and Requirements}
 
-			\subsubsection{The outputs}
+			\subsubsection{The Outputs}
 
 				The display will be a 16x16 grid of LEDs which will server as the main display for the game console.
 				An addressable GRB LED strip will be cut into 16 lines of 16 LEDs, the lines being wired together neatly on a piece of plywood.
@@ -94,20 +96,18 @@
 				The enclosure will also need a 1x1 foot piece of thin plywood to serve as a backboard, a styrofoam sheet to make a grid separating the LEDs, and frosted acrylic glass to diffuse light.
 				Most of these items can be found in the lab, with others being provided by group members.
 				The only items to be purchased and included in our costs will be the LED strip at around \$25, the plywood between \$15 and \$30, the styrofoam sheet around \$2, and the acrylic glass around \$5.
+				The audio output will consist of two small speakers that were available in the lab, so they resulted in no additional cost.
 
-				The audio output will consist of two small speakers.
-				These speakers were available in the lab, so they resulted in no additional cost.
+			\subsubsection{The Inputs}
 
-			\subsubsection{The user inputs}
-
-				The user inputs---removable controllers---will each consist of a joystick fitted into a block that can be attached to the console via interlocking rails.
+				The user inputs---one removable controller per player---will each consist of a joystick fitted into a block that can be attached to the console via interlocking rails.
 				The controller would have metal contacts that, when slid into corresponding rails on the console, would establish a connection with the Arduino Mega.
 				The rail would likely consist of guides that slide together to hold the controller firmly in place without too much stress on the contacts, but enough pressure to ensure a reliable connection.
 				The materials required have been provided by group members or will be acquired when gathering the materials for housing the LED display.
 
 		\subsection{Design Approaches}
 
-			\subsubsection{The LED matrix}
+			\subsubsection{The LED Matrix}
 
 				\begin{enumerate}
 					\item Test the LED strip to ensure the individual LEDs work and are addresable with the Arduino Mega
@@ -121,7 +121,7 @@
 
 				\noindent If, for instance, we are unable to control the LED matrix, an alternative last-minute solution would be to buy a premade LED matrix to server as the display.
 
-			\subsubsection{Game controllers}
+			\subsubsection{The Game Controllers}
 
 				\begin{enumerate}
 					\item Test the joysticks, ensuring they communicate appropriately with the Arduino Mega
@@ -134,18 +134,19 @@
 
 				\noindent If there are technical or logistical difficulties with this approach, the controllers could be hard-wired to the LED display and affixed using other methods (screws, adhesive, etc.) to ensure working inputs for the system.
 
-			\subsubsection{The divider}
+			\subsubsection{The Divider}
 
 				\begin{enumerate}
-					\item Testing variously sized dividers made of a temporary material like cardboard to determine the ideal dimensions.
+					\item Test variously sized dividers made of a temporary material like cardboard to determine the ideal dimensions.
 						No player should have visibility of the other player's screen with the divider in place, but it should also be lightweight and relatively small.
-					\item Constructing the divider with plywood
-					\item Adding freestanding supports that hold the divider upright
+					\item Construct the divider with plywood
+					\item Add freestanding supports that hold the divider upright
 				\end{enumerate}
 
 				\noindent If it is a challenge to make the divider stand upright, a slot can be made in the display housing to help hold the divider in place.
 
-			\subsection{The software}
+\newpage 
+			\subsubsection{The Software}
 				
 				\begin{itemize}
 					\item Work together to create a generic and composable game board setup, including a virtual pixel matrix, inputs, menus, and audio cues that work for any game.
@@ -158,12 +159,12 @@
 				\noindent The software team will be working mostly independently on separate games, with input and help from each other as is necessary.
 				\medskip
 
-				\noindent If there are problems with our working software implementation, it will likely be due to how memory is allocated.
+				\noindent If there are problems with implementing working software on the Arduinos, it will likely be due to how memory is allocated.
 				Given that there is a very limited amount of memory on the microcontrollers, alternate methods of allocating resources for each game may need to be considered (static allocation, predictable allocation and de-allocation per-game, etc).
 
 			\subsection{Integration}
 	
-				One of the last steps in the first iteration of the design process will be to ensure that the microcontrollers control the physical hardware as intended.
+				The last step in the first iteration of the design process will be to ensure that the microcontrollers control the physical hardware as intended.
 				If encountering problems at this stage, previous design steps will need to be revisited.
 				Any problems at this point will be interfacing issues or limitations imposed by our hardware.
 
@@ -179,7 +180,7 @@
 
 		\subsection{Heat}
 	
-			While power delivery has its own risks, power draw also poses its own.
+			While power delivery has its safety risks, power draw also poses its own.
 			Given that the LEDs and other components will be enclosed in a grid surrounded by foam and wood, the console may begin to heat up over time.
 			If too much heat accumulates, the console may experience performance issue, fail, or even catch fire.
 			If left unattended, the console could become a risk to its surroundings.
@@ -193,16 +194,27 @@
 
 	\section{Sustainability and Lifecycle}
 
-		Modular components such as the connectable controllers can be swapped out for new controllers if the existing controllers become damaged or begin to not work.
-		Additionally, the divider can be replaced.
+		The team has prioritized modularity of hardware, and composability of software---things that greatly contribute to the project's overall sustainability and longevity.
+		Modular components like the controllers can be swapped out for new controllers if the existing controllers become damaged or begin to not work.
+		Similarly, individual LEDs used in the display can be swapped out in the case that they begin to malfunction; each pixel of the display can be independently replaced, ensuring that the entire display does not need to be discarded when only a part of it begins to malfunction.
 
-		Individual LEDs used in the display can be swapped out in the case that they begin to malfunction (each pixel of the display can be independently replaced, ensuring that the entire display does not need to be discarded when only a part of it begins to malfunction).
-
-		Additional games can be added further down the line to improve replayability by the ability to upload games to the arduino/microcontroller in the console.
-		
-		Possible scalability if this were to be a product mass-produced, as older kids with some coding experience can learn to code their own games onto it to allow the product to grow with the child. The code can be modular as well so that vital code is protected from accidental changes during experimentation. 
+		Additionally, since the codebase if built on generic classes controlling the hardware, games can be added further down the line to improve replayability by flashing new programs to the microcontrollers.
+		For sake of argument, if the console were to be a mass-produced product, users can learn to implement their own games as they gain programming experience, thus allowing the product to grow with the user.
+		The basic game board implementation is kept separate from game-specific logic by design, so vital code is protected from accidental changes during experimentation.
 
 	\section{Team Roles and Responsibilities}
+
+		The team roles and responsibilities have been split into three main categories: (A) hardware, (B) software, and (C) integration.
+
+		\begin{enumerate}[label=\bf\Alph*.]
+			\item Marlon and Luc will be focused on hardware, both working on the LED display.
+				Marlon will also focus on power and data delivery and construction of the game controllers, while Luc will work on the display enclosure.
+
+			\item Sophia and Jason will focus on software, creating the virtual game board but also working to implement Battleship and Snake respectively.
+
+			\item Immanuel will maintain strong communication between the hardware and software teams.
+				He will assist in troubleshooting across the system when issues arise, and ensure the team has the necessary tools and resources during working sessions.
+		\end{enumerate}
 
 \newpage
 

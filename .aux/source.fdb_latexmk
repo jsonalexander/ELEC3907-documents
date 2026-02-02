@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1769989556.59711 "/home/jason/Documents/y3/ELEC3907/proposal/source.tex" "source.pdf" "source" 1769989557.3679 0
-  ".aux/source.aux" 1769989557.30218 3732 57caa19c9149879129b5b5b485be0c29 "pdflatex"
-  ".aux/source.out" 1769989557.30318 3154 b6dadf308f9a15556d83045c0bfda6f4 "pdflatex"
-  ".aux/source.toc" 1769989557.30318 1814 ae867e4aa16229a6aef4456ca7bc3f85 "pdflatex"
-  "/home/jason/Documents/y3/ELEC3907/proposal/source.tex" 1769989556.50318 15969 600d4111f2d1259f165b12209c65bbbe ""
+["pdflatex"] 1769991220.57982 "/home/jason/Documents/y3/ELEC3907/proposal/source.tex" "source.pdf" "source" 1769991221.35437 0
+  ".aux/source.aux" 1769991221.28966 3741 cd644b3bb8343f99fe9d294971a3c937 "pdflatex"
+  ".aux/source.out" 1769991221.28966 3159 d14a15a72b38af8e9d40cabef707a486 "pdflatex"
+  ".aux/source.toc" 1769991221.28966 1823 835817bcfd44ab65d5d1eaf6e444d1e7 "pdflatex"
+  "/home/jason/Documents/y3/ELEC3907/proposal/source.tex" 1769991220.48266 17028 495c5287313c3531eb7c44027dd8fa3d ""
   "/nix/store/5lkvak5xm36zmr5v781pwlpisz74izqw-texlive-combined-full-2025.20250703/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1 5523663 308b163833ea1e8c3bdd7f575aa370c5 ""
   "/nix/store/5lkvak5xm36zmr5v781pwlpisz74izqw-texlive-combined-full-2025.20250703/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1 3600487 3aaf53e4502ab7f3d8002f90e9f23fca ""
   "/nix/store/5lkvak5xm36zmr5v781pwlpisz74izqw-texlive-combined-full-2025.20250703/share/texmf-var/web2c/texmf.cnf" 1 44455 b4c8111756484fdacbfdb6f87f6a83b6 ""
@@ -92,6 +92,7 @@
   "/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250703-texmfdist/tex/latex/caption/caption.sty" 1 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250703-texmfdist/tex/latex/caption/caption3.sty" 1 72619 ee90b6612147680fd73c3b1406a74245 ""
   "/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250703-texmfdist/tex/latex/cleveref/cleveref.sty" 1 329481 7fc6b003158402a4c694bc0a1b729308 ""
+  "/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250703-texmfdist/tex/latex/enumitem/enumitem.sty" 1 52272 63d293bc0d496619edb57585740861a2 ""
   "/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250703-texmfdist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250703-texmfdist/tex/latex/eso-pic/eso-pic.sty" 1 11876 6ef493863ae0d7a984706973240c2237 ""
   "/nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250703-texmfdist/tex/latex/etoolbox/etoolbox.sty" 1 46850 d87daedc2abdc653769a6f1067849fe0 ""
@@ -140,8 +141,8 @@
   "fig/gantt.pdf" 1769982076.96908 122031 bace2d4907e4e554eaa306732e769379 ""
   "img/block-diagram.png" 1769976896.52684 123129 49ddcf384762e44a8335a549a88837c2 ""
   "img/ortho-view.png" 1769977241.49953 303685 bb92f66a4d45ae4e67690c6e893a558b ""
-  "sec/titlepage.tex" 1769987166.06435 606 a8d8f07f19ca6900499744240b5c1a4d ""
-  "source.tex" 1769989556.50318 15969 600d4111f2d1259f165b12209c65bbbe ""
+  "sec/titlepage.tex" 1769989679.61947 468 665638b9444219d99adbbccb5a653164 ""
+  "source.tex" 1769991220.48266 17028 495c5287313c3531eb7c44027dd8fa3d ""
   (generated)
   ".aux/source.aux"
   ".aux/source.log"
