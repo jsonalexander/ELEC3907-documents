@@ -32,7 +32,7 @@
 
 	\section{Project Overview}
 
-		The goal of this project is to provide a compact arcade-style game console designed to restore hands-on interaction commonly found in traditional arcade systems.
+		The goal of this project is to provide a compact arcade-style game console designed to encourage hands-on interaction commonly found in traditional arcade systems.
 		The console would use a two-dimensional LED grid as the primary display as well as physical input devices and near-field audio output.
 		It is designed to run multiple classic games such as Tron, Battleship, and Snake, all using a multipurpose hardware layout and modular software design.
 
@@ -55,25 +55,25 @@
 				\end{wrapfigure}
 
 				The console itself (seen in \cref{fig:hardware-ortho}) consists of multiple subsystems, including a 16x16 LED display with a divider, where each of the 256 pixels of the display can be individually addressed to display an almost arbitrary number of colours.
-				There are two LCD screens for game selection, acting as a menu for players to interface with the console.
+				There are two LCD screens for game selection, acting as a menu for players to interact with the console.
 				These LCD screens will also act as instructional screens to guide players through the games.
-				There are two removable and adjustable controllers, where the controller can be plugged into either side of the console to accommodate right- or left-handedness or for single and multiplayer options.
+				There are two removable and adjustable controllers, where the controller can be plugged into either side of the console to accommodate right- and left-handedness or for single and multiplayer options.
 				The speaker provides sound effects for audio feedback and soundscapes during gameplay.
-				There is also a freestanding divider that will be used during games that require the players' boards to be hidden from each other during gameplay---as in the case in battleship, for example.
+				There is also a freestanding divider that will be used during games when the players should not see each other's portions of the display---as in the case in battleship, for example.
 				A microcontroller is programmed with the game logic, interfacing with the other components to provide a seamless experience while using the console.
 				An additional microcontroller listens for audio playback cues, and drives a speaker accordingly, allowing for ansynchronous audio output.
-				Finally, the power supply powers the display and the microcontrollers, the first of the latter of which subsequently powers the other components.
+				Finally, the power supply powers the display and the microcontrollers, the latter of which subsequently powers the other components.
 
 			\subsubsection{The Software}
 
 				The software system must be able to interface with all the components outlined, taking input from the game controllers, controlling the LED matrix, using the LCD displays to relay information to each player, and playing audio.
 				The system is constrained by the memory limitations of both microcontrollers, and the fact they are both single-threaded.
-				To overcome scheduling issues, especially with continuous-delivery applications like audio playback, the second microcontroller is dedicated to receiving playback signals from the first microcontroller and controlling the speaker continuously.
-				This second microcontroller can be much less powerful than the main one, essentially serving as an additional thread for the console, allowing it to avoid audio cut-outs and maintain responsiveness of the console proper.
+				To overcome scheduling issues, especially with continuous-delivery applications like audio playback, the second microcontroller is dedicated to receiving playback signals from the first microcontroller and controlling the speaker ansynchronously.
+				This second microcontroller can be much less powerful than the main one, essentially serving as an additional thread for the console, allowing it to avoid audio cut-outs and maintain responsiveness.
 
 \newpage
 
-				Additionally, since the hardware system is designed to be general-purpose, we have decided to leverage object-oriented programming techniques in C++ to model the hardware system and allow for composability.
+				Additionally, since the hardware system is designed to be general-purpose, the group has decided to leverage object-oriented programming techniques in C++ to model the hardware system and allow for composability.
 				The hardware-software interface is designed in such a way that basic operations like controlling the LED matrix can be inherited and extended to implement game-specific behaviours, reducing unnecessary boilerplate code and further memory usage.
 				\cref{fig:system-diagram} provides a block diagram outlining the general control flow of the system.
 				Most elements included in this figure will have some class representation in software, allowing for simple control of components through their corresponding class methods.
@@ -89,13 +89,13 @@
 
 			\subsubsection{The Outputs}
 
-				The display will be a 16x16 grid of LEDs which will server as the main display for the game console.
-				An addressable GRB LED strip will be cut into 16 lines of 16 LEDs, the lines being wired together neatly on a piece of plywood.
-				The LEDs will be controlled by an Arduino Mega and will require a power supply.
+				The display will be a 16x16 grid of LEDs which will serve as the main display for the game console.
+				An addressable RGB LED strip will be cut into 16 lines of 16 LEDs, the lines being wired together neatly on a piece of plywood.
+				The LEDs will be controlled by an Arduino Mega and require an external power supply.
 				In total, this component will require 256 addressable LEDs from a WS2812B LED strip, an Arduino Mega, a power supply, and physical interconnections---presumably wires, solder, etc.
-				The enclosure will also need a 1x1 foot piece of thin plywood to serve as a backboard, a styrofoam sheet to make a grid separating the LEDs, and frosted acrylic glass to diffuse light.
+				The enclosure will also need a thin 1 foot by 1 foot piece of plywood to serve as a base, a styrofoam sheet to make a grid separating the LEDs, and frosted acrylic glass to diffuse light.
 				Most of these items can be found in the lab, with others being provided by group members.
-				The only items to be purchased and included in our costs will be the LED strip at around \$25, the plywood between \$15 and \$30, the styrofoam sheet around \$2, and the acrylic glass around \$5.
+				The only items to be purchased and included in our costs will be the LED strip at around \$25, the plywood between \$15 and \$30, the styrofoam sheet around \$2, and the acrylic glass being around \$5.
 				The audio output will consist of two small speakers that were available in the lab, so they resulted in no additional cost.
 
 			\subsubsection{The Inputs}
@@ -143,7 +143,7 @@
 					\item Add freestanding supports that hold the divider upright
 				\end{enumerate}
 
-				\noindent If it is a challenge to make the divider stand upright, a slot can be made in the display housing to help hold the divider in place.
+				\noindent If it is a challenge to make the divider stand upright on its own, a slot can be made in the display housing to help hold the divider in place.
 
 \newpage 
 			\subsubsection{The Software}
@@ -174,7 +174,7 @@
 
 			Supplying power to the microcontrollers and LED matrix poses inherent risks.
 			The LED strip selected to build the display from has a considerable maximum power draw due to its individually addressable LEDs and the ability to control the colour of each LED.
-			The recommended power supply from the vendor is 60 Watts (5 Volts at 12 Amps), however initial testing has shown that the actual power draw needed for this project is likely to be much less than that since all the LEDs in the matrix will not be at full load when portions of the display are off and only individual colours (i.e. red, blue, green) are used instead of combinations thereof.
+			The recommended power supply from the vendor is 60 Watts (5 Volts at 12 Amps), however initial testing has shown that the actual power needed for this project is likely to be much less than that since all the LEDs in the matrix will not be at full load when portions of the display are off and only individual colours (i.e. red, green, blue) are used instead of combinations thereof.
 			Still, supplying the required power to all 256 LEDs in the display will take a considerable amount of power.
 			Risks associated with power delivery can be mitigated by ensuring there is no exposed wiring and implementing additional safety components like fuses to ensure fail-safety.
 
@@ -198,13 +198,14 @@
 		Modular components like the controllers can be swapped out for new controllers if the existing controllers become damaged or begin to not work.
 		Similarly, individual LEDs used in the display can be swapped out in the case that they begin to malfunction; each pixel of the display can be independently replaced, ensuring that the entire display does not need to be discarded when only a part of it begins to malfunction.
 
-		Additionally, since the codebase if built on generic classes controlling the hardware, games can be added further down the line to improve replayability by flashing new programs to the microcontrollers.
+		Additionally, since the codebase will be built on generic classes modelling the hardware, games can be added further down the line to improve replayability by flashing new programs onto the microcontrollers.
 		For sake of argument, if the console were to be a mass-produced product, users can learn to implement their own games as they gain programming experience, thus allowing the product to grow with the user.
 		The basic game board implementation is kept separate from game-specific logic by design, so vital code is protected from accidental changes during experimentation.
 
 	\section{Team Roles and Responsibilities}
 
 		The team roles and responsibilities have been split into three main categories: (A) hardware, (B) software, and (C) integration.
+		While these responsibilities have been assigned, it is expected that the group will need to work together to ensure the project goes according to plan and its many parts interoperate properly.
 
 		\begin{enumerate}[label=\bf\Alph*.]
 			\item Marlon and Luc will be focused on hardware, both working on the LED display.
@@ -216,12 +217,15 @@
 				He will assist in troubleshooting across the system when issues arise, and ensure the team has the necessary tools and resources during working sessions.
 		\end{enumerate}
 
+		\vfil
+		\hfil...
+
 \newpage
 
 	\section{Project Timing}
 
 		The project design cycle will be a standard engineering one.
-		The following work breakdown structure lists all foreseen tasks with major development phases in chronological order.
+		The following work breakdown structure lists all foreseen tasks with major design phases in chronological order.
 		A more in-depth Gantt chart with task designations and progress is listed in \cref{appendix:supplemental}.
 
 		\begin{itemize}
